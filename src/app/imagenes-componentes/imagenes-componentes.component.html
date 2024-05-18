@@ -1,0 +1,9 @@
+<div>
+    <div *ngIf="selectPhoto">
+        <p>Foto seleccionada</p>
+        <img [src]="selectedPhoto"class="imagSelect" />
+      </div>
+      <p>seleccionar foto:</p>
+      <div *ngFor="let photo of ListFotos; let iter = index"class="orden">
+        <img [src]="photo.thumbnailUrl" (click)="selectPhoto(iter)" />
+      </div>
